@@ -36,21 +36,21 @@ pipeline {
         //         }
         //     }
         // }
-        stage('Install Terraform') {
-            steps {
-                script {
-                    sh 'brew tap hashicorp/tap'
-                    sh 'brew install hashicorp/tap/terraform'
+        // stage('Install Terraform') {
+        //     steps {
+        //         script {
+        //             sh 'brew tap hashicorp/tap'
+        //             sh 'brew install hashicorp/tap/terraform'
                     
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
     
-        stage ("terraform init") {
-            steps {
-                sh 'terraform init'
-            }
-        }
+        // stage ("terraform init") {
+        //     steps {
+        //         sh 'terraform init'
+        //     }
+        // }
 
 
         stage('Plan') {
