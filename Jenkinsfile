@@ -15,8 +15,10 @@ pipeline {
                  script{
                         dir("terraform")
                         {
-                            git branch: 'main', 
-                                url: 'https://github.com/jahnvigangwar/Terraform_demo.git"
+                            checkout scmGit(branches: [[name: 'main']], 
+                                userRemoteConfigs: [[url: 'https://github.com/jahnvigangwar/Terraform_demo']])
+                            // git branch: 'main', 
+                            //     url: 'https://github.com/jahnvigangwar/Terraform_demo.git"
                         }
                     }
                 }
